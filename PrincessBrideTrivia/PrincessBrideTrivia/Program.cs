@@ -1,4 +1,4 @@
-﻿namespace PrincessBrideTrivia;
+namespace PrincessBrideTrivia;
 
 public class Program
 {
@@ -39,7 +39,7 @@ public class Program
 
     public static bool DisplayResult(string userGuess, Question question)
     {
-        if (userGuess == question.CorrectAnswerIndex)
+        if (question.IsCorrectAnswer(userGuess))
         {
             Console.WriteLine("Correct");
             return true;
@@ -92,3 +92,5 @@ public class Program
         return questions;
     }
 }
+
+﻿
